@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'idea'
+    id 'eclipse'
+}
+
+ext {
+    daggerVersion = '2.44'
+}
+
+subprojects {
+    group 'using-dagger'
+
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+
+    dependencies {
+        // DI
+        implementation group: "com.google.dagger", name: "dagger", version: "${daggerVersion}"
+        testImplementation group: "com.google.dagger", name: "dagger", version: "${daggerVersion}"
+        annotationProcessor group: "com.google.dagger", name: "dagger-compiler", version: "${daggerVersion}"
+        testAnnotationProcessor group: "com.google.dagger", name: "dagger-compiler", version: "${daggerVersion}"
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+}

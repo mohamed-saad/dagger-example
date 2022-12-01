@@ -1,0 +1,11 @@
+rootProject.name = 'dagger-example'
+
+include 'main-driver'
+
+include 'people'
+
+include 'greeting-api'
+
+include 'german-greeting'
+
+include 'arabic-greeting'

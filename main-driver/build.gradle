@@ -1,0 +1,10 @@
+
+dependencies {
+
+    implementation(project(":greeting-api"))
+    implementation(project(":people"))
+    implementation(project(":german-greeting"))
+    implementation(project(":arabic-greeting"))
+
+
+}
